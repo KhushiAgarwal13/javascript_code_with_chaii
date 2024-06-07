@@ -41,5 +41,51 @@ so if want the previous value also, then we can do like this
 document.getElementById('title').setAttribute('class', 'test heading')
 
 const title = document.getElementById('title') 
+title.style.backgroundColor='green'
+title.style.padding='15px'
+
+title.textContent   -- return DOM learning on Chai aur Code
+title.innerHTML  --- return DOM learning on Chai aur Code
+title.innerText -- return DOM learning on Chai aur Code
+
+what's the difference between innerText and innerContent
+if you want to see all the text inside an element including a content hidden 
+with the help of style, then you can use innertext
+
+// inner innerHTML will give you html tags you have used inside      
+
+
+// Query Selector
+document.querySelector('h2')
+document.querySelector('#title')
+document.querySelector('.heading')
+document.querySelector('input[type="password"]')
+
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+const myul=document.querySelector('ul')
+myul.querySelector('li')
+this will return the first li 
+const turnGreen = myul.querySelector('li')
+turnGreen.style.backgrounColor="green"
+turnGreen.style.padding = 10px
+-----this will turn the first list to green
+
+document.querySelectorAll('li')
+-- this will give you node list of all list items
+
+const templist= document.querySelectorAll('li')
+NodeList(3)=[li,li,li]
+templist.style.color="green" ---throws an error
+// as this is not an array , this is nodelists
+templist[0].style.color='green' --- this will turn the first li as green
+
+ 
+
 
 
