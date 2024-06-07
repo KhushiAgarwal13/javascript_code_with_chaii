@@ -25,3 +25,21 @@
     </div>
 </body>
 </html>
+<!-- Lets make notes -->
+<!-- How to select the text , DOM learning on chai aur code
+document.getElementById('title')  returns the value of complete element (write the id name in single quotes)
+document.getElementById('title').id  --- returns the id of element
+document.getElementByClassNaem('heading')
+document.getElementById('title').getAttribute('id')  --- title
+document.getElementById('title').getAttribute('class') ---- heading
+on passing the keys, you'll get the values -->
+
+document.getElementById('title').setAttribute('class', 'test')
+this set attribute will overwrite the value, removing the previous value
+so if want the previous value also, then we can do like this
+
+document.getElementById('title').setAttribute('class', 'test heading')
+
+const title = document.getElementById('title') 
+
+
