@@ -84,8 +84,45 @@ NodeList(3)=[li,li,li]
 templist.style.color="green" ---throws an error
 // as this is not an array , this is nodelists
 templist[0].style.color='green' --- this will turn the first li as green
+// as it can match some array properties
 
+const myH1=document.querySelectorAll('h1')
+ --- NodeList [h1#title.heading]
+ as there is one h1 , still you can do like this
+ myH1.style.color = 'green'  -- you will get an error
+we an can use forEach loop here
+//  in forEach, we need to give a callback function(a function which doesn't have name)
+tempLiist.forEach(function(l){
+    l.style.backgroundColor='green'
+})
+--- l mae ek-ek karke nodelist ki value aati rahengi
+
+NOTE:  if you want to use Map on node list,
+ There are ways to convert to convert The nodelist to arrays,
+ but try to use forEach here, 
  
+Now , Lets talk About Class Name
+ <li class='list-item'>one</li>
+ <li class='list-item'>two</li>
+ <li class='list-item'>three</li>
+ <li class='list-item'>four</li>
+
+const tempClassList = document.getElementByClassName('list-item')
+ ----return you HTMLCollection(5)[.......]
+ can i use for each here??? NOOOO
+
+ I can convert HTMLCollection to ARRAY -- using Array.from()
+ Array.from(tempClassList) ---- returns you an array
+
+ const myConvertedArray = Array.from(tempClassList)
+ // Now we can use for each loop
+
+myConvertedArray.forEach(function(li){
+    li.style.color='orange'
+})
+
+
+
 
 
 
