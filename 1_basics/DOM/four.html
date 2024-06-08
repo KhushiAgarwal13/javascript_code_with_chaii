@@ -1,0 +1,59 @@
+<!-- EDIT AND REMOVE ELEMENTS -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121 ; color:#fff">
+    
+    <ul>
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+     function addLanguage(langName){
+       const li=  document.createElement('li')
+        // item/element has beeen created, now we need to add value in it
+ li.innerHTML =`{langName}`
+ document.querySelctor('.language').appendChild(li)
+
+     }
+     addLanguage("python")
+     addLanguage("typescript")
+
+     // optimizied way of adding new element
+     function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        const addText = document.createTextNode(langName)
+        li.appendChild(addText)
+
+        document.querySelector('.lannguage').appendChlid(li)
+
+        // li.append(document.createTextNode(langName))
+         // always go with appendChild , not with innerHTML
+     }
+     addOptiLanguage('golang')
+
+     //Edit -- now we need to edit
+
+     const secondLang = document.querySelector("li:nth-child(2)")
+     // return <li>python</li>
+     //secondlang.innterHTML ="Mojo"
+     const newli = document.createElement('li')
+     newli.textContent ="Mojo" // it's not added anywhere --hawa mae hai ye
+     secondLang.replaceWith(newli)
+// we can also use innerHTML in place of textContent
+
+// edit with outer html
+const firstLang=document.querySelector("li:first-child")
+firstLang.outerHTML = '<li>Typescript</li>'
+      
+
+
+</script>
+</html>
