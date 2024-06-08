@@ -16,9 +16,11 @@
 <script>
      const parent= document.querySelector('.parent')
      console.log(parent)
-     console.log(parent.children)
-     console.log(parent.children[1])
-     // parent.children gives us a collection
+     console.log(parent.children)   
+     // gives all the elements -- of parent's children
+     console.log(parent.children[1])   
+     conosle.log(parent.children[0].innterHTML)  
+     // parent.children gives us a HTMLcollection 
      // how to traverse a collection using loop
 
      for(let i=0;i<parent.children.length;i++){
@@ -27,11 +29,19 @@
     //  parent.children[1].style.color = "orange"
     console.log(parent.firstElementChild);
     console.log(parent.lastElementChild);
+    //  here we are moving from parent to child
+    // We can also move from child to parent
     const dayone = document.querySelector('.day')
     console.log(dayone)
+    // monday 
+    console.log(dayOne.parentElement)
+    // will this tell us the parent element -- YES
+    console.log(dayOne.nextEementSibling);                                               
+        
+    console.log("nodes",parent.childNodes)
     </script>
   
 
 
 </html>
-<!--  #Task1 - Find the value in parent element -->
+<!--  #Task1 - Find the value in parent element -->                                                                     
