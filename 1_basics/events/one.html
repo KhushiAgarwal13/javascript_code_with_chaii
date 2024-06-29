@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html>/
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html events</title>
+    <title> html events </title>
 </head>
 <body style="background-color:#414141; color:aliceblue">
     <h2>Amazing Images</h2>
@@ -28,10 +28,39 @@
         alert("owl clicked again")
     })
 
+// event object
+ document.getElementById('owl').addEventListender('click',function(event){
+    console.log(event)
+    console.log(event.target)
+ })
+
+ // type , timestamp, defaultPrevented
+ // target, toElement, srchElement, currentTarget
+ // clientX, clientY, scrrenX, screenY
+ // altkey, cltrkey, shiftkey, keyCode
 </script>
 </body>
 </html>
 <!-- Event Propogation -->
-<!-- capture and bubblle -->-
+<!-- capture and bubblle -->
  <!-- bubble bottom to top -->
-  <!-- capturing top to botton -->
+<!-- capturing top to botton -->
+
+<!-- what is event propogation -->
+ <!-- there are two phases of event propogation -->
+<!-- event bubbling is default(false)  -->
+ <!-- in some cases , you need to use   -->
+
+ document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside the ul")
+ }, false)
+ // ye waala kab print hoga, jab aap images k ander click karoge
+
+ document.getElementById('owl').addEventListener('click',function(e){
+    console.log("owl clicked")
+
+ })
+ // ye waala kab print hoga, jab aap specifically owl par click karenge
+ 
+
+ 
